@@ -1,54 +1,123 @@
 # FinancialResearcher Crew
 
-Welcome to the FinancialResearcher Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Welcome to the **FinancialResearcher Crew** project, powered by [crewAI](https://crewai.com).  
+This project sets up a **multi-agent AI system** designed to conduct **in-depth financial research** and generate **professional reports** on companies, leveraging agent collaboration and external tools.  
 
-## Installation
+---
 
-Ensure you have Python >=3.10 <3.14 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+## 🚀 What Can the FinancialResearcher Do?
 
-First, if you haven't already, install uv:
+The FinancialResearcher Crew is built to **research and analyze companies** in a structured, automated way.  
+
+### Capabilities:
+- 📊 **Company Research**: Collects information on a company’s financial health, history, challenges, opportunities, and future outlook.  
+- 📰 **News & Events Tracking**: Finds and summarizes recent news and developments relevant to the company.  
+- 🔍 **Pattern & Trend Analysis**: Identifies trends from past performance and future opportunities.  
+- 📝 **Report Generation**: Produces polished, professional research reports with executive summaries and structured sections.  
+- ⚠️ **Disclaimer**: Reports are **for informational purposes only** and should **not be used for trading or investment decisions**.  
+
+---
+
+## 🛠 Tools Used
+- **[Gemini](https://deepmind.google/technologies/gemini/)** → Core LLM powering research and analysis.  
+- **[Serper](https://serper.dev/)** → Used for real-time internet search to gather up-to-date company information and news.  
+- **crewAI Framework** → Enables multi-agent orchestration and collaboration.  
+
+---
+
+## 🧑‍🤝‍🧑 Agents in Your Crew
+
+Your FinancialResearcher Crew is composed of specialized agents, each with a distinct role:
+
+### **Researcher**
+- **Role**: Senior Financial Researcher  
+- **Goal**: Research the company, its news, and potential developments.  
+- **Backstory**: A seasoned researcher known for finding the most relevant information and presenting it clearly.  
+
+### **Analyst**
+- **Role**: Market Analyst & Report Writer  
+- **Goal**: Analyze the research data and create a structured, professional report.  
+- **Backstory**: A meticulous analyst skilled at spotting trends and communicating insights effectively.  
+
+---
+
+## 📋 Tasks Workflow
+
+1. **Research Task** *(done by the Researcher)*  
+   - Investigates the company’s:  
+     - Current status & financial health  
+     - Historical performance  
+     - Challenges & opportunities  
+     - Recent news & events  
+     - Future outlook  
+   - **Output**: A structured research document.  
+
+2. **Analysis Task** *(done by the Analyst)*  
+   - Builds on the Research Task output.  
+   - Produces a polished report including:  
+     - Executive summary  
+     - Key insights and trends  
+     - Market outlook (non-trading advice)  
+     - Professional formatting with clear sections  
+   - **Output**: `output/report.md`  
+
+---
+
+## ⚙️ Installation
+
+Ensure you have Python >=3.10 <3.14 installed.  
+This project uses [UV](https://docs.astral.sh/uv/) for dependency management.
+
+1. Install **uv** if not already installed:
+   ```bash
+   pip install uv
+   ```
+
+2. Navigate to your project folder and install dependencies:
+   ```bash
+   crewai install
+   ```
+
+---
+
+## 🔑 Configuration
+
+You will need both a **Gemini API key** and a **Serper API key**.  
+
+Create a `.env` file in the project root with the following format:
 
 ```bash
-pip install uv
+MODEL=gemini/gemini-2.0-flash-001
+GEMINI_API_KEY=your_gemini_api_key_here
+SERPER_API_KEY=your_serper_api_key_here
 ```
 
-Next, navigate to your project directory and install the dependencies:
+---
 
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
-crewai install
-```
-### Customizing
+## ▶️ Running the Project
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
-
-- Modify `src/financial_researcher/config/agents.yaml` to define your agents
-- Modify `src/financial_researcher/config/tasks.yaml` to define your tasks
-- Modify `src/financial_researcher/crew.py` to add your own logic, tools and specific args
-- Modify `src/financial_researcher/main.py` to add custom inputs for your agents and tasks
-
-## Running the Project
-
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
+From the root folder, run:
 
 ```bash
 $ crewai run
 ```
 
-This command initializes the financial_researcher Crew, assembling the agents and assigning them tasks as defined in your configuration.
+This will execute the workflow, with agents collaborating on research and analysis.  
+The final structured report will be saved in:
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+```
+output/report.md
+```
 
-## Understanding Your Crew
+---
 
-The financial_researcher Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+## 📚 Support
 
-## Support
+- [Documentation](https://docs.crewai.com)  
+- [GitHub Repository](https://github.com/joaomdmoura/crewai)  
+- [Discord Community](https://discord.com/invite/X4JWnZnxPb)  
+- [Interactive Docs Chat](https://chatg.pt/DWjSBZn)  
 
-For support, questions, or feedback regarding the FinancialResearcher Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
+---
 
-Let's create wonders together with the power and simplicity of crewAI.
+✨ With the FinancialResearcher Crew, you can automate professional-grade financial research and analysis with ease.  
