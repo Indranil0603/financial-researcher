@@ -21,7 +21,7 @@ The FinancialResearcher Crew is built to **research and analyze companies** in a
 ## 🛠 Tools Used
 - **[Gemini](https://deepmind.google/technologies/gemini/)** → Core LLM powering research and analysis.  
 - **[Serper](https://serper.dev/)** → Used for real-time internet search to gather up-to-date company information and news.  
-- **crewAI Framework** → Enables multi-agent orchestration and collaboration.  
+- **[crewAI Framework](https://github.com/crewAIInc/crewAI)** → Enables multi-agent orchestration and collaboration.  
 
 ---
 
